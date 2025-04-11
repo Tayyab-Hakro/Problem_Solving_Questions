@@ -3,14 +3,28 @@
  * @return {string}
  */
 var clearDigits = function(s) {
-let res  = ''
-    for(let i = 0 ; i<s.length ;i++){
-s[i] = parseInt(s[i])
-if(s[i] === parseInt(s[i+1])){
-res = s[i-1 ]
-}
-}
-return res
+    let stack = [];
+    
+    for (let char of s) {
+        if (isDigit(char)) {
+            // Remove the last non-digit from the stack (if any)
+            while (stack.length && isDigit(stack[stack.length - 1])) {
+                stack.pop();
+            }
+            if (stack.length) stack.pop(); // remove the closest non-digit
+        } else {
+            stack.push(char); // store letters
+        }
+    }
+    
+    return stack.join('');
 };
 
-console.log(clearDigits("cb34"))
+function isDigit(ch) {
+    return ch >= '0' && ch <= '9';
+}
+
+clearDigits("cb34") 
+// First: '3' deletes 'b' => "c4"
+// Then: '4' deletes 'c' => ""
+// Output: ""
