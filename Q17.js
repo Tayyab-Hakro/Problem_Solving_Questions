@@ -4,7 +4,7 @@ var checkArithmeticSubarrays = function(nums, l, r) {
     for (let i = 0; i < l.length; i++) {
         // Extract the subarray from nums[l[i]] to nums[r[i]]
         let subarray = nums.slice(l[i], r[i] + 1);
-
+        console.log(subarray)
         // Sort the subarray
         subarray.sort((a, b) => a - b);
 
