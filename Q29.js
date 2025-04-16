@@ -1,13 +1,16 @@
-let stack = [];
+// Write a function that takes a string as input and
+//  returns the reversed string using a stack.
 
-// Push items
-stack.push(10);
-stack.push(20);
-stack.push(30);
+function reversedSTR(str) {
+    let stack = [];
+for(let i = 0 ; i<str.length ;i++){
+    stack.push(str[i])
+}
+let reversed = ""
+while(stack.length > 0){
+    reversed += stack.pop()
+}
+return reversed
+}
 
-console.log(stack); // [10, 20, 30]
-
-// Pop item
-let lastItem = stack.pop();
-console.log(lastItem); // 30
-console.log(stack);    // [10, 20]
+console.log(reversedSTR("hello")); // Output: "olleh"
