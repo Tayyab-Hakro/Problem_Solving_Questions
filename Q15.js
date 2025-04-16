@@ -8,7 +8,6 @@ var totalMoney = function(n) {
     for (let i = 0; i < weeks; i++) {
         total += 7 * (2 * (i + 1) + 6) / 2; // sum of 7-day week starting with i+1
     }
-    console.log(total +"us ")
 
     // Total from remaining days
     for (let j = 0; j < daysLeft; j++) {
