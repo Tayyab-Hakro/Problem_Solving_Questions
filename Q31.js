@@ -4,7 +4,6 @@ function encryptSum(nums) {
     for (let num of nums) {
         // Convert number to string to access individual digits
         let strNum = num.toString();
-        console.log(strNum)
         // Find the largest digit in the number
         let maxDigit = Math.max(...strNum.split(''));
 
