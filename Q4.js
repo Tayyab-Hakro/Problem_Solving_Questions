@@ -8,7 +8,6 @@ var calPoints = function(operations) {
             record.pop(); // Pattern 2
         } else if (op === "D") {
             record.push(2 * record[record.length - 1]); // Pattern 3
-            console.log(record)
         } else if (op === "+") {
             record.push(record[record.length - 1] + record[record.length - 2]); // Pattern 4
         }
