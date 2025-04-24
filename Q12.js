@@ -1,15 +1,9 @@
 /**
  * @param {string} s
- * @param {string[]} wordDict
- * @return {boolean}
+ * @return {number}
  */
-var wordBreak = function(s, wordDict) {
-    wordDict = wordDict.flat()
-    for(let i = 0 ; i<s.length ; i++){
-        if(wordDict.includes(s[i])){
-            return true
-        }
-    }
-    return false
+var removePalindromeSub = function(s) {
+let reverse = s.split().reverse().join("")
+console.log(reverse)
 };
-console.log(wordBreak("applepenapple", ["apple","pen"]))
+console.log(removePalindromeSub("ababa"))
