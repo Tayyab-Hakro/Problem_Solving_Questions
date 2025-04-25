@@ -8,8 +8,7 @@ var findTheArrayConcVal = function(nums) {
 
     while (left <= right) {
         if (left === right) {
-            // total += nums[left]; // only one element left
-            console.log(nums[left])
+            total += nums[left]; // only one element left
         } else {
             const concat = parseInt(String(nums[left]) + String(nums[right]));
             total += concat;

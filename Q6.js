@@ -1,7 +1,6 @@
 function maximumUnits(boxTypes, truckSize) {
     // Step 1: Sort by units per box, descending
     boxTypes.sort((a, b) => b[1] - a[1]);
-    console.log(boxTypes +"box")
     let totalUnits = 0;
 
     // Step 2: Load boxes greedily
