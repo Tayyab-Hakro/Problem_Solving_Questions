@@ -4,13 +4,11 @@
  */
 var sortArrayByParity = function(nums) {
 nums = nums.sort((a,b) => a -b )
-let stack = []
-for(let i =0 ; i<nums.length ;i++){
-    if(nums[i] % 2 === 0 ){
-        stack.push(nums[i])
-    }
-}    
-return stack
+ let arr = nums.filter((item) => item %2 === 0)
+ let arr2 = nums.filter((item) => item %2 !== 0)
+console.log(arr)
+console.log(arr2)
+return arr.concat(arr2)
 };
 
 console.log(sortArrayByParity([3,1,2,4]))
