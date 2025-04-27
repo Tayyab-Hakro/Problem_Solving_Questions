@@ -1,8 +1,4 @@
-function print(val){
-    if(val === 1){return }
-    console.log("h")
-    print(val-1)
+let person = {name :"tayyab" , age:23}
 
-}
-console.log(print(10))
-
+let {name,age} = person
+console.log(name ,age)
