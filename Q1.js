@@ -1,12 +1,14 @@
 /**
- * @param {string} s
- * @return {number}
+ * @param {string} date
+ * @return {string}
  */
-var reverseDegree = function(s) {
-    let total = 0;
-    for (let i = 0; i < s.length; i++) {
-        let reverseAlphabetIndex = 26 - (s.charCodeAt(i) - 'a'.charCodeAt(0));
-        total += reverseAlphabetIndex * (i + 1); // i+1 for 1-based index
-    }
-    return total;
+var convertDateToBinary = function(date){
+    const [year , month, day] = date.split("-")
+
+    let Year = parseInt(year).toString(2)
+    let months = parseInt(month).toString(2)
+    let d =  parseInt(day).toString(2)
+return  `${Year}-${months}-${d}`
+
 };
+console.log(convertDateToBinary("2080-02-29"))
