@@ -1,4 +1,4 @@
-# import numpy as np
+import numpy as np
 
 # # # Numpy Operations and  mathematics 
 # # a = np.array([1, 2, 3])
@@ -54,3 +54,24 @@
 # np.sort(b, axis=1)  # Row-wise sort
 # # [[1 2 3]
 # #  [4 5 6]]
+
+# ## Filtering in Numpy
+# import numpy as np
+
+# arr = np.array([10, 20, 30, 40, 50])
+
+# # Filter condition: elements greater than 25
+# filter_condition = arr == 30
+
+# # Apply filter
+# filtered_arr = arr[filter_condition]
+
+# print(filtered_arr)  # Output: [30 40 50]
+
+# arr = np.array([1, 2, 3])
+# new_arr = np.append(arr, [4, 5])
+# print(new_arr)  # Output: [1 2 3 4 5]
+# arr2 = np.array([4,5,6])
+# new_arr2 = np.append(arr2 ,[49,30])
+# remove_arr = np.delete(new_arr2,3)
+# print(remove_arr)
